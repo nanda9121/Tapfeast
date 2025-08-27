@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ea3ff68748.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="food-app.css">
+</head>
+<body>
+    <div id="sectionHomePage">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-image"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active nav-link-item" href="#ViewMenusection">Explore Menu<span class="sr-only">(current)</span></a>
+                        <a class="nav-link nav-link-item" href="#WCUsection">Why Choose Us?</a>
+                        <a class="nav-link nav-link-item" href="#deliverySection">Delivery & Payment</a>
+                        <a class="nav-link nav-link-item" href="#followUsSection">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner-section-bg-container  d-flex flex-column justify-content-center">
+            <div class="text-center">
+                <h1 class="banner-main-heading">Get Delicious Food Anytime</h1>
+                <p class="banner-description">Eat Smart & Healthy</p>
+                <a href="#ViewMenusection"><button class="custom-button">View Menu</button></a>
+                <button class="custom-outline-button">Order Now</button>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="ViewMenusection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Explore Menu</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_A_1664167434483_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Non-Veg Starters</h1>
+                            <a class="menu-item-link" onclick="display('sectionNonVegStarters')">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Veg Starters</h1>
+                            <a onclick="display('sectionVegStarters')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Soups</h1>
+                            <a onclick="display('sectionSoups')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Fish & Sea food</h1>
+                            <a onclick="display('sectionSeaFood')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Main Course</h1>
+                            <a onclick="display('sectionMainCourse')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Fast Food</h1>
+                            <a onclick="display('sectionFastFood')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Salads</h1>
+                            <a onclick="display('sectionSalads')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Desserts</h1>
+                            <a onclick="display('sectionDesserts')" class="menu-item-link">
+                                View All
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wcu-bg-container pt-5 pb-5" id="WCUsection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="wcu-main-heading">Why Choose Us?</h1>
+                        <p class="wcu-description">We use both original recipes and classic versions of famous food items.</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/food-serve.png" class="wcu-card-image">
+                            <h1 class="wcu-card-heading">Food Service</h1>
+                            <p class="wcu-card-description">
+                                Experience fine dining at the comfort of your home. All our orders are carefully packed and arranged to give you the nothing less than perfect.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/fruits-img.png" class="wcu-card-image">
+                            <h1 class="wcu-card-heading">Fresh Food</h1>
+                            <p class="wcu-card-description">
+                                The Fresh Food group provides fresh-cut fruits and vegetables
+                                directly picked from our partner farms and farm houses so that
+                                you always get them tree to plate.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/offers-img.png" class="wcu-card-image">
+                            <h1 class="wcu-card-heading">Best Offers</h1>
+                            <p class="wcu-card-description">
+                                Food Coupons & Offers upto
+                                <span class="offers">50% OFF</span>
+                                and Exclusive Promo Codes on All Online Food Orders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="healthy-food-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <div class="text-center">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/healthy-food-plate-img.png" class="healthy-food-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <h1 class="healthy-food-section-heading">
+                            Fresh, Healthy, Organic, Delicious Fruits
+                        </h1>
+                        <p class="healthy-food-section-description">
+                            Say no to harmful chemicals and go fully organic with our range of
+                            fresh fruits and veggies. Pamper your body and your senses with
+                            the true and unadulterated gifts from mother nature. with the true
+                            and unadulterated gifts from mother nature.
+                        </p>
+                        <button class="custom-button">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-and-payment-section pt-5 pb-5" id="deliverySection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5 order-1 order-md-2">
+                        <div class="text-center">
+                            <img src="https://static.vecteezy.com/system/resources/previews/011/654/489/non_2x/discount-60-percent-off-in-surprise-opened-red-gift-box-golden-ribbon-3d-style-free-png.png" class="delivery-and-payment-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 order-2 order-md-1">
+                        <h1 class="delivery-and-payment-section-heading">
+                            Delivery and Payment
+                        </h1>
+                        <p class="delivery-and-payment-section-description">
+                            Enjoy hassle-free payment with the plenitude of payment options
+                            available for you. Get live tracking and locate your food on a
+                            live map. It's quite a sight to see your food arrive to your door.
+                            Plus, you get a 5% discount on every order every time you pay
+                            online.
+                        </p>
+                        <button class="custom-button">Order Now</button>
+                        <div class="mt-3">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img" />
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img" />
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/paypal-card-img.png" class="payment-card-img" />
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/american-express-img.png" class="payment-card-img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thanking-customers-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                        <h1 class="thanking-customers-section-heading">
+                            Thank you for being a valuable customer to us.
+                        </h1>
+                        <p class="thanking-customers-section-description">
+                            We have a surprise gift for you
+                        </p>
+                        <div class="d-md-none">
+                            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                        </div>
+                        <button type="button" class="custom-button" data-toggle="modal" data-target="#exampleModal">
+                            Redeem Gift
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">Gift Voucher</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="https://mx2games.com/wp-content/uploads/2021/08/10-2.jpg.webp" class="w-100" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 d-none d-md-block">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="follow-us-icon-container">
+                                <i class="fa-brands fa-twitter icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fa-brands fa-instagram icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fa-brands fa-facebook icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionNonVegStarters">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Non-Veg Starters</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ipoh.hyderabadrecipes.com.my/wp-content/uploads/2022/07/IMG-20210116-WA0003-600x600.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken Tikka</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_3_1664167518223_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Mutton Sukha</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ipoh.hyderabadrecipes.com.my/wp-content/uploads/2022/07/IMG-20210116-WA0004-300x300.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chilli Fish</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ipoh.hyderabadrecipes.com.my/wp-content/uploads/2022/07/chilli-prawns-recipe-300x300.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chilli Prawns</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ipoh.hyderabadrecipes.com.my/wp-content/uploads/2022/07/Chicken-65-1-300x300.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken 65</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ipoh.hyderabadrecipes.com.my/wp-content/uploads/2022/07/Chicken-Manchurian-300x300.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken Manchurian</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_1_1664167471960_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken Popcorn</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_4_1664167534705_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Fish Cakes</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionVegStarters">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Veg Starters</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_1_1663427531378_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Veg seekh kebab</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_3_1663427551185_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Nanzo</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_4_1663427567289_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Masala Focaccia</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_5_1663427607321_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Vazhapoo vadai</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_6_1663427615877_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Broccoli Tikki</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_7_1663427623973_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Sandwiches</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_8_1663427630749_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Poha cutlet</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://assets.zeezest.com/images/PROD_10_1663427650065_thumb_800.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Lahori dahi bhalle</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSoups">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="Non-Veg-Starters-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Soups</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.indianveggiedelight.com/wp-content/uploads/2020/09/creamy-mushroom-soup-featured-360x360.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">creamy mushroom soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/01/vegetarian-indian-mulligatawny-soup-3-1200-360x360.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Indian mulligatawny soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/04/ragi-soup-featured-360x360.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Ragi soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.indianveggiedelight.com/wp-content/uploads/2020/06/lauki-soup-instant-pot-featured-360x360.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Lauki soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.crazymasalafood.com/wp-content/images/20-most-delicious-non-vegetarian-soups-we-love/shrimp-and-fish-soup.jpg.webp" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Thai Prawns soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/5f/e2/a4/chicken-hot-n-sour-soup.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken n sour soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://benaras.club/wp-content/uploads/2020/12/04.-Hot-Sour-Soup.jpeg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Hot Sour Soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://chandrikabiryanipoint.com/public/uploads/products/1740551441_0ed29431dceeb5e329dd.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chi-Manchow Soup</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSeaFood">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="Non-Veg-Starters-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Fish & Sea Food</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Recheado-Masala-Fish.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Recheado Masala Fish</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Tandoori-Fish-on-the-BBQ.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Tandoori Fish</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Indian-Fish-Fry.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Indian Fish Fry</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Prawn-Curry-with-Moringa-Leaves.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Prawn-Curry with Moringa Leaves</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Masala-Machchi.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Masala Machchi</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Spiced-Salmon.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Spiced Salmon</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Ajwainy-Monkfish.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Ajwainy Monkfish</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Tandoori-lobster.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Tandoori lobster</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionMainCourse">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="Non-Veg-Starters-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Main Course</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2014/01/Mutton-Dum-Biryani-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Mutton Dum Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/10/Shrimp-Biryani-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Shrimp Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/10/Afghani-Biryani-1-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken Dum Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2017/07/Hyderabadi-Mutton-Biryani-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Hyderabadi Mutton Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/10/Mushroom-Biryani-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Mushroom Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2008/03/Vegetable-Biryani-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Vegetable Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/10/Prawn-Biryani-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Prawn Biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/06/Tehari-biryani.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Tehari biryani</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionFastFood">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="Non-Veg-Starters-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Fast Food</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2015/08/Thai-Curry-Noodles-585x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Egg Noodles</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2015/01/noodles_stir_fried_chilli_vegetables-550x390.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Veg Noodles</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://curatedkitchenware.com/cdn/shop/articles/20221203144456-chicken-lo-mein.jpg?v=1670078848" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Chicken Noodles</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/chicken_fried_rice.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Veg fried rice</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.vincenzosplate.com/wp-content/uploads/2021/07/610x350-Photo-6_829-How-to-Make-EGG-FRIED-RICE-Approved-by-Uncle-Roger-V1.jpg.webp" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Egg Fried Rice</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://tildaricelive.s3.eu-central-1.amazonaws.com/wp-content/uploads/2021/05/04111234/chicken-fried-rice-low-res-2.png" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">chicken fried rice</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.licious.in/blog/wp-content/uploads/2021/09/shutterstock_1650877375.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Egg Manchurian</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ranigo.in/wp-content/uploads/2024/04/MANCHURIAN-DRY-CLOSE-UP.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Veg Manchurian</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSalads">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="Non-Veg-Starters-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Salads</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/easy_caesar_salad_64317_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Easy caesar salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/greek_salad_16407_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Greek salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/panzanella_23604_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">panzanella</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/caprese_salad_33659_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Caprese salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/chicken_noodle_salad_67466_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">chicken noodle salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/new_york_chicken_and_67791_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Newyork chicken and apple salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/greek_pasta_salad_15496_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Greek pasta salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/beetroot_salad_06735_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Beetroot and apple salad</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionDesserts">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-arrow-left" onclick="display('sectionHomePage')"></i></a>
+            </div>
+        </nav>
+        <div class="Non-Veg-Starters-bg-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h1 class="menu-section-heading mt-4 mb-3">Desserts</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/tiramisu_affogato_41821_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Tiramisu affogato</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/strawberry_frozen_50789_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Strawberry frozen yoghurt</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/toffee_sauce_96260_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Toffee sauce</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/winter_swiss_roll_bowl_27318_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Winter swiss roll bowl</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/iced_berries_with_63709_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Iced berries with limoncello white chocolate sauce</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/no-bake_advocaat_and_99988_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">No-bake Advocaat and ginger cake</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/mangopassionwithhone_67097_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Mango passion with honey and yoghurt</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/lemon_and_lime_meringue_77987_16x9.jpg" class="menu-item-image w-100" />
+                            <div class="d-flex flex-row justify-content-end">
+                                <h1 class="menu-card-title mr-3">Lemon and lime meringue tranche pie</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square mt-4 mr-3" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/dg0i2ewrm/image/upload/v1755621763/tapfeast_ikkbfd.png" class="tap-feast-logo" />
+                        <h1 class="footer-section-mail-id">orderfood@tapfeast.com</h1>
+                        <p class="footer-section-address">
+                            123 Maisammaguda, Hyderabad, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script type="text/javascript" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+</html>
