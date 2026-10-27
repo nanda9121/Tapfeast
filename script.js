@@ -6,8 +6,20 @@
     var cartItems = document.querySelector("[data-cart-items]");
     var cartCount = document.querySelector("[data-cart-count]");
     var cartStatus = document.querySelector("[data-cart-status]");
+    var cartSummary = document.querySelector("[data-cart-summary]");
     var checkoutForm = document.querySelector("[data-checkout-form]");
     var cartModal = $("#tapfeastCartModal");
+    var menuPrices = window.TAPFEAST_MENU_PRICES;
+    var deliveryFee = window.TAPFEAST_DELIVERY_FEE;
+    var currency = new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "INR",
+        maximumFractionDigits: 0
+    });
+
+    function formatPrice(amount) {
+        return currency.format(amount);
+    }
 
     function announce(message) {
         cartStatus.textContent = message;
@@ -69,18 +81,32 @@
 
     function renderCart() {
         var totalItems = 0;
+        var subtotal = 0;
         cartItems.replaceChildren();
 
         cart.forEach(function (item) {
+            var price = menuPrices[item.name];
+            if (!Number.isFinite(price)) {
+                return;
+            }
             totalItems += item.quantity;
+            subtotal += price * item.quantity;
 
             var row = document.createElement("div");
             row.className = "tapfeast-cart-item";
 
+            var details = document.createElement("div");
+            details.className = "tapfeast-cart-item-details";
             var name = document.createElement("span");
             name.className = "tapfeast-cart-item-name";
             name.textContent = item.name;
-            row.appendChild(name);
+            details.appendChild(name);
+
+            var linePrice = document.createElement("span");
+            linePrice.className = "tapfeast-cart-line-price";
+            linePrice.textContent = formatPrice(price * item.quantity);
+            details.appendChild(linePrice);
+            row.appendChild(details);
 
             var controls = document.createElement("div");
             controls.className = "tapfeast-cart-item-controls";
@@ -100,6 +126,10 @@
         });
 
         cartCount.textContent = String(totalItems);
+        cartSummary.hidden = cart.size === 0;
+        document.querySelector("[data-cart-subtotal]").textContent = formatPrice(subtotal);
+        document.querySelector("[data-cart-delivery]").textContent = formatPrice(cart.size ? deliveryFee : 0);
+        document.querySelector("[data-cart-total]").textContent = formatPrice(subtotal + (cart.size ? deliveryFee : 0));
         checkoutForm.hidden = cart.size === 0;
 
         if (cart.size === 0) {
@@ -108,6 +138,8 @@
             emptyMessage.textContent = "Your cart is empty. Add a dish from the menu to get started.";
             cartItems.appendChild(emptyMessage);
         }
+
+        renderMenuControls();
     }
 
     function createQuantityButton(label, accessibleLabel, itemName, change) {
@@ -162,6 +194,11 @@
     }
 
     function addDish(name) {
+        if (!Object.prototype.hasOwnProperty.call(menuPrices, name)) {
+            announce("A price is not configured for " + name + ". Please contact the restaurant.");
+            return;
+        }
+
         var item = cart.get(name);
         if (item) {
             if (item.quantity >= 99) {
@@ -180,7 +217,55 @@
             : name + " added. The browser could not save the cart for your next visit.");
     }
 
-    function installMenuButtons() {
+    function renderMenuControls() {
+        document.querySelectorAll(".tapfeast-menu-controls").forEach(function (controls) {
+            var name = controls.dataset.itemName;
+            var item = cart.get(name);
+            controls.replaceChildren();
+
+            if (!Number.isFinite(menuPrices[name])) {
+                var unavailable = document.createElement("span");
+                unavailable.className = "tapfeast-menu-price-unavailable";
+                unavailable.textContent = "Price unavailable";
+                controls.appendChild(unavailable);
+                return;
+            }
+
+            var price = document.createElement("span");
+            price.className = "tapfeast-menu-price";
+            price.textContent = formatPrice(menuPrices[name]);
+            controls.appendChild(price);
+
+            if (!item) {
+                var addButton = document.createElement("button");
+                addButton.type = "button";
+                addButton.className = "tapfeast-add-button";
+                addButton.textContent = "ADD";
+                addButton.setAttribute("aria-label", "Add " + name + " to your order");
+                addButton.addEventListener("click", function () {
+                    addDish(name);
+                });
+                controls.appendChild(addButton);
+                return;
+            }
+
+            var stepper = document.createElement("div");
+            stepper.className = "tapfeast-menu-stepper";
+            stepper.setAttribute("aria-label", name + " quantity controls");
+            stepper.appendChild(createQuantityButton("−", "Decrease quantity of " + name, name, -1));
+
+            var quantity = document.createElement("span");
+            quantity.className = "tapfeast-menu-quantity";
+            quantity.textContent = String(item.quantity);
+            quantity.setAttribute("aria-label", "Quantity: " + item.quantity);
+            stepper.appendChild(quantity);
+
+            stepper.appendChild(createQuantityButton("+", "Increase quantity of " + name, name, 1));
+            controls.appendChild(stepper);
+        });
+    }
+
+    function installMenuControls() {
         document.querySelectorAll(".menu-item-card svg.bi-plus-square").forEach(function (icon) {
             var card = icon.closest(".menu-item-card");
             var title = card && card.querySelector(".menu-card-title");
@@ -189,17 +274,19 @@
                 return;
             }
 
-            var button = document.createElement("button");
-            button.type = "button";
-            button.className = "tapfeast-add-button";
-            button.textContent = "Add";
-            button.setAttribute("aria-label", "Add " + name + " to your order");
-            button.addEventListener("click", function () {
-                addDish(name);
-            });
+            var controls = document.createElement("div");
+            controls.className = "tapfeast-menu-controls";
+            controls.dataset.itemName = name;
 
-            icon.replaceWith(button);
+            icon.replaceWith(controls);
         });
+        document.querySelectorAll(".bg-container .menu-section-heading").forEach(function (heading) {
+            var notice = document.createElement("p");
+            notice.className = "tapfeast-demo-pricing-notice";
+            notice.textContent = "Sample INR prices for demonstration only. Confirm final prices with Tapfeast.";
+            heading.insertAdjacentElement("afterend", notice);
+        });
+        renderMenuControls();
     }
 
     document.querySelectorAll("[data-open-cart]").forEach(function (button) {
@@ -215,14 +302,21 @@
         }
 
         var details = new FormData(checkoutForm);
+        var subtotal = Array.from(cart.values()).reduce(function (sum, item) {
+            return sum + menuPrices[item.name] * item.quantity;
+        }, 0);
         var lines = Array.from(cart.values()).map(function (item) {
-            return item.quantity + " x " + item.name;
+            return item.quantity + " x " + item.name + " — " + formatPrice(menuPrices[item.name] * item.quantity);
         });
         var body = [
             "New Tapfeast order",
             "",
-            "Items:",
+            "Items (sample menu prices):",
             lines.join("\n"),
+            "",
+            "Subtotal: " + formatPrice(subtotal),
+            "Estimated delivery fee: " + formatPrice(deliveryFee),
+            "Estimated total: " + formatPrice(subtotal + deliveryFee),
             "",
             "Customer: " + details.get("name"),
             "Phone: " + details.get("phone"),
@@ -239,6 +333,6 @@
     });
 
     restoreCart();
-    installMenuButtons();
+    installMenuControls();
     renderCart();
 })();

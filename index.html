@@ -43,6 +43,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 class="menu-section-heading">Explore Menu</h1>
+                        <p class="tapfeast-demo-pricing-notice">Sample menu prices for demonstration only. Confirm final prices with Tapfeast before ordering.</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="shadow menu-item-card p-3 mb-3">
@@ -1320,7 +1321,7 @@
         <span class="tapfeast-cart-count" data-cart-count aria-live="polite">0</span>
     </button>
     <div class="modal fade" id="tapfeastCartModal" tabindex="-1" role="dialog" aria-labelledby="tapfeastCartTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog tapfeast-cart-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title tapfeast-cart-title" id="tapfeastCartTitle">Your order</h2>
@@ -1331,6 +1332,12 @@
                 <div class="modal-body">
                     <p class="tapfeast-cart-status" data-cart-status role="status" aria-live="polite"></p>
                     <div data-cart-items></div>
+                    <div class="tapfeast-cart-summary" data-cart-summary aria-label="Order price summary">
+                        <p><span>Subtotal</span><strong data-cart-subtotal>₹0</strong></p>
+                        <p><span>Estimated delivery</span><strong data-cart-delivery>₹0</strong></p>
+                        <p class="tapfeast-cart-total"><span>Estimated total</span><strong data-cart-total>₹0</strong></p>
+                        <p class="tapfeast-cart-demo-note">Sample prices and delivery fee; confirm the final amount with the restaurant.</p>
+                    </div>
                     <form data-checkout-form>
                         <h3 class="tapfeast-checkout-heading">Delivery details</h3>
                         <div class="form-group">
@@ -1352,6 +1359,7 @@
             </div>
         </div>
     </div>
+    <script src="menu-prices.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
 </body>
