@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Explore the Tapfeast menu and place a food order in Hyderabad.">
+    <title>Tapfeast | Delicious food, made easy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -31,7 +35,7 @@
                 <h1 class="banner-main-heading">Get Delicious Food Anytime</h1>
                 <p class="banner-description">Eat Smart & Healthy</p>
                 <a href="#ViewMenusection"><button class="custom-button">View Menu</button></a>
-                <button class="custom-outline-button">Order Now</button>
+                <button type="button" class="custom-outline-button" data-open-cart>Order Now</button>
             </div>
         </div>
         <div class="explore-menu-section pt-5 pb-5" id="ViewMenusection">
@@ -39,6 +43,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 class="menu-section-heading">Explore Menu</h1>
+                        <p class="tapfeast-demo-pricing-notice">Sample menu prices for demonstration only. Confirm final prices with Tapfeast before ordering.</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="shadow menu-item-card p-3 mb-3">
@@ -222,7 +227,7 @@
                             Plus, you get a 5% discount on every order every time you pay
                             online.
                         </p>
-                        <button class="custom-button">Order Now</button>
+                        <button type="button" class="custom-button" data-open-cart>Order Now</button>
                         <div class="mt-3">
                             <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img" />
                             <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img" />
@@ -1310,9 +1315,53 @@
             </div>
         </div>
     </div> 
+    <button type="button" class="tapfeast-cart-trigger" data-open-cart aria-label="Open your order cart">
+        <span aria-hidden="true">🛒</span>
+        <span>Your order</span>
+        <span class="tapfeast-cart-count" data-cart-count aria-live="polite">0</span>
+    </button>
+    <div class="modal fade" id="tapfeastCartModal" tabindex="-1" role="dialog" aria-labelledby="tapfeastCartTitle" aria-hidden="true">
+        <div class="modal-dialog tapfeast-cart-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title tapfeast-cart-title" id="tapfeastCartTitle">Your order</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close order cart">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="tapfeast-cart-status" data-cart-status role="status" aria-live="polite"></p>
+                    <div data-cart-items></div>
+                    <div class="tapfeast-cart-summary" data-cart-summary aria-label="Order price summary">
+                        <p><span>Subtotal</span><strong data-cart-subtotal>₹0</strong></p>
+                        <p><span>Estimated delivery</span><strong data-cart-delivery>₹0</strong></p>
+                        <p class="tapfeast-cart-total"><span>Estimated total</span><strong data-cart-total>₹0</strong></p>
+                        <p class="tapfeast-cart-demo-note">Sample prices and delivery fee; confirm the final amount with the restaurant.</p>
+                    </div>
+                    <form data-checkout-form>
+                        <h3 class="tapfeast-checkout-heading">Delivery details</h3>
+                        <div class="form-group">
+                            <label for="tapfeast-customer-name">Your name</label>
+                            <input class="form-control" id="tapfeast-customer-name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tapfeast-customer-phone">Phone number</label>
+                            <input class="form-control" id="tapfeast-customer-phone" name="phone" type="tel" autocomplete="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tapfeast-delivery-address">Delivery address</label>
+                            <textarea class="form-control" id="tapfeast-delivery-address" name="address" autocomplete="street-address" rows="2" required></textarea>
+                        </div>
+                        <p class="tapfeast-checkout-note">Continue to create an order email. You can review it and send it from your email app. Payment is arranged with the restaurant.</p>
+                        <button class="custom-button tapfeast-checkout-button" type="submit">Continue to email order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="menu-prices.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript" src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
 </body>
 
 </html>
-
